@@ -6,10 +6,14 @@ setGameOption(GameOption.INVENTORY_BUTTON, False)
 setGameOption(GameOption.MESSAGE_BOX_BUTTON, False)
 
 start_scene = Scene("Runaway", "images/startbg.png")
+scene = Scene("game", "images/gamebg.png")
 
 startButton = Object('images/start.png')
 startButton.locate(start_scene, 600, 270)
 startButton.show()
+def startButton_onMouse(x, y, action):
+    pass
+startButton.onMouseAction = startButton_onMouse
 
 endButton = Object('images/end.png')
 endButton.locate(start_scene, 600, 230)
@@ -19,7 +23,7 @@ def endButton_onMouse(x, y, action):
     endGame()
 endButton.onMouseAction = endButton_onMouse
 
-class chara(Object):
+class Player(Object):
     def __init__(self, file, scene, x, y, i, j):
         super().__init__(file)
         self.locate(scene, x, y)
@@ -29,7 +33,7 @@ class chara(Object):
         self.j = j
 
     # move funciton
-    def move(self):
+    def move(self, dir):
         pass
 
     def is_die(self):
@@ -38,6 +42,16 @@ class chara(Object):
         else:
             return False
 
+player = Player("images/player.png", scene, )
 
+class Arrow(Object):
+    def __init__(self, file, scene, x, y, dir):
+        super().__init__(file)
+        self.locate(scene, x, y)
+        self.show()
+        self.dir = dir
+
+    def onMouseAction(self, x, y, aciton):
+        pass
 
 startGame(start_scene)
