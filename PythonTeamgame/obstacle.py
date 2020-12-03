@@ -37,6 +37,7 @@ class Obstacle(Object):
                 if self.x < 100:
                     if self.player.y == self.y:
                         print("collision")
+                        showMessage("Game End!")
                         self.scene.isCollision = True
                         self.timer1.onTimeout()
                 if self.x < 0:
