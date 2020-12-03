@@ -10,7 +10,7 @@ class Player(Object):
         self.y = self.centerY
         self.scene = scene
         self.locate(scene, 0, self.y)
-        self.setScale(0.021)
+        self.setScale(0.2)
         
         if show:
             self.show()
