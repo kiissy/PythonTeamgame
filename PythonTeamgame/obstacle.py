@@ -43,5 +43,6 @@ class Obstacle(Object):
                     self.timer1.onTimeout()
         self.timer1.onTimeout()
     def onTimeOut(self):
+        self.y = -1
         self.hide()
         del self
