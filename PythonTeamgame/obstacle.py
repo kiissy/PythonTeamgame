@@ -4,7 +4,9 @@ import random
 
 class Obstacle(Object):
     def __init__(self, scene, player):
-        super().__init__("images/cat1.png")
+        super().__init__(random.choice(['images/cat1.png', 'images/cat2.png',\
+            'images/cat3.png', 'images/cat4.png', 'images/dog1.png',\
+            'images/dog2.png','images/dog3.png', 'images/dog4.png']))
         self.scene = scene
         self.x = 1000
         
