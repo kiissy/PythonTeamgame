@@ -20,8 +20,9 @@ class Obstacle(Object):
         self.player = player
 
     def start(self):
-        t = threading.Thread(target=self.move)
-        t.start()
+        self.t = threading.Thread(target=self.move)
+        self.t.daemon = True
+        self.t.start()
     
     def move(self):
         self.timer1 = Timer(int(10 / self.speed))
@@ -41,9 +42,11 @@ class Obstacle(Object):
                         self.scene.isCollision = True
                         self.timer1.onTimeout()
                 if self.x < 0:
-                    self.timer1.onTimeout()
+                    break
         self.timer1.onTimeout()
+
     def onTimeOut(self):
         self.y = -1
         self.hide()
         del self
+        return
