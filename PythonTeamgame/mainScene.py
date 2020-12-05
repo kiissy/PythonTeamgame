@@ -27,9 +27,10 @@ class MainScene(Scene):
 
     def onStart(self, x, y, action):
         self.startButton.hide()
+        self.mainPlayer.initLocate()
         self.mainPlayer.show()
-        t = threading.Thread(target=self.randomGeneration)
-        t.start()
+        self.t = threading.Thread(target=self.randomGeneration)
+        self.t.start()
 
     def onKeyboard(self, key, pressed):
         if key == self.keyUp and pressed:

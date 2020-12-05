@@ -14,6 +14,10 @@ class Player(Object):
         
         if show:
             self.show()
+        
+    def initLocate(self):
+        self.y = self.centerY
+        self.locate(self.scene, 0, self.y)
     
     def onCombine(self):
         print("test")
