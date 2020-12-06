@@ -20,3 +20,6 @@
 
 * 장애물과 충돌 시 게임 종료 화면
 ![image](https://user-images.githubusercontent.com/30391819/101081465-72887980-35ed-11eb-8ebb-5ffcf5534d90.png)
+
+* Youtube 링크
+ https://youtu.be/fMaK1hcdFvo

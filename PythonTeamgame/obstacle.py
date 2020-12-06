@@ -16,7 +16,7 @@ class Obstacle(Object):
         self.setScale(0.45)
         self.show()
         self.end = False
-        self.speed =2.0
+        self.speed = 5.0
         self.player = player
 
     def start(self):
